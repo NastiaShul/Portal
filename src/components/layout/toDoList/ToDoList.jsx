@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useContext } from 'react';
 import { ToDoForm, ToDoFilter, ToDoItem } from '../../layout';
 import useLocalStorage from '../../../hooks/useLocalStorage';
 
@@ -110,21 +110,22 @@ const ToDoList = () => {
 
          <ToDoFilter onFilterChange={handleFilterChange} />
 
-         <ul>
-            {filteredTodos.map((todo) => (
-               <ToDoItem
-                  key={todo.id}
-                  todo={todo}
-                  editing={editingId === todo.id}
-                  editValue={editValue}
-                  onToggleComplete={() => handleToggleComplete(todo.id)}
-                  onStartEditing={() => handleStartEditing(todo.id, todo.text)}
-                  onEditInputChange={handleEditInputChange}
-                  onEditTodo={() => handleEditTodo(todo.id)}
-                  onDeleteTodo={() => handleDeleteTodo(todo.id)}
-               />
-            ))}
-         </ul>
+            <ul>
+               {filteredTodos.map((todo) => (
+
+                  <ToDoItem
+                     key={todo.id}
+                     todo={todo}
+                     editing={editingId === todo.id}
+                     editValue={editValue}
+                     onToggleComplete={() => handleToggleComplete(todo.id)}
+                     onStartEditing={() => handleStartEditing(todo.id, todo.text)}
+                     onEditInputChange={handleEditInputChange}
+                     onEditTodo={() => handleEditTodo(todo.id)}
+                     onDeleteTodo={() => handleDeleteTodo(todo.id)}
+                  />
+               ))}
+            </ul>
       </section>
    );
 };

@@ -1,3 +1,16 @@
-h3 {
-   margin: 20px 0 0 0;
+@import '../../../style/variables.scss';
+
+.todo-page{
+   &__item{
+      margin: 40px 0;
+      box-shadow: -23px 20px 19px -17px $dark;
+      padding: 15px;
+      & >:not(:last-child){
+         margin: 0 0 15px 0;
+      }
+      & span{
+         color: $main-color;
+         font-weight: bold;
+      }
+   }
 }
