@@ -1,0 +1,80 @@
+@import '../../../style/variables.scss';
+
+.todo-list{
+   & li{
+      display: flex;
+      justify-content: space-between;
+      box-shadow: -23px 20px 19px -17px $dark;
+      padding: 15px;
+      @media (max-width: 576px) {
+         flex-direction: column;
+      }
+   }
+   &__buttons {
+      & button{
+         margin: 0 0 0 10px;
+         @media (max-width: 576px) {
+            margin: 15px 0 0 10px;
+            float: right;
+         }
+      }
+   }
+
+   &__input{
+      display: flex;
+      align-items: center;
+   }
+
+   &__checkbox {
+      appearance: none;
+      outline: none;
+      border: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      background-color: transparent;
+      box-shadow: 0 0 3px $main-color;
+      margin-right: 8px;
+      cursor: pointer;
+   }
+   
+   &__checkbox:checked {
+      background-color: $main-color;
+   }
+   
+
+   &__text {
+      width: 100%;
+      font-weight: bold;
+   }
+}
+
+.edit{
+   width: 100%;
+   padding: 5px;
+   font-size: 15px;
+   font-weight: bold;
+   color: $grey;
+   border: 1px solid $grey;
+   &:focus{
+      outline: none;
+      box-shadow: 0 0 5px $grey;
+   }
+}
+
+.checkbox {
+   appearance: none;
+   outline: none;
+   border: none;
+   width: 16px;
+   height: 16px;
+   border-radius: 3px;
+   background-color: transparent;
+   box-shadow: 0 0 3px $main-color;
+   margin-right: 8px;
+   cursor: pointer;
+}
+
+.checkbox:checked {
+   background-color: $main-color;
+}

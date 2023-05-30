@@ -1,0 +1,43 @@
+@import '../../../style/variables.scss';
+
+.app {
+    &__header {
+        display: flex;
+        @media (min-width: 769px) {
+         justify-content: space-between;
+      }
+        @media (max-width: 768px) {
+         flex-direction: column;
+      }
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 133%;
+        @media (max-width: 768px) {
+         font-size: 24px;
+         margin: 0 0 15px 0;
+      }
+        span {
+            color: $main-color;
+        }
+    }
+    &__menu {
+        ul {
+            display: flex;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 133%;
+            @media (min-width: 769px) {
+               justify-content: space-between;
+               font-size: 24px;
+            }
+            li {
+                margin: 0 8px 0 0;
+                a:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
