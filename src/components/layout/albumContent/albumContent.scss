@@ -1,0 +1,8 @@
+@import '../../../style/variables.scss';
+
+.warning-message{
+   color: $main-color;
+   @media (max-width: 768px) {
+      font-size: 12px;
+   }
+}

@@ -1,0 +1,16 @@
+@import '../../../style/variables.scss';
+
+.album {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 768px) {
+         margin-top: 25px;
+      }
+      
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+}
