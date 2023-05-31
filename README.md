@@ -10,17 +10,17 @@ The Home page (`/`) has two links: Photos and Todos. Clicking on these links wil
 
 ### Todos
 
-- You can add and delete todos.
-- Todos can be marked as "done", in which case they are moved to the end of the list, the checkbox is checked, and the text is crossed out. For example: "Buy some milk".
-- The to-do list should persist even after the page reload (you can use local storage).
+- Todos can be added and deleted.
+- Todos can be marked as "done", in which case they are moved to the end of the list, the checkbox is checked, and the text is crossed out. For example: "~~Buy some milk~~".
+- The to-do list should persist even after the page reload (can use local storage).
 - Clicking on a todo should open its page with the corresponding id in the route, for example: `todos/[todo_id]`.
 
 ### Photos
 
 Flow:
 1) The user visits the page.
-2) They enter an album id (a number from 1 to 100) in the input field.
-3) They click the "Get photos" button, and the photos from the corresponding album are displayed.
+2) User can enter an album id (a number from 1 to 100) in the input field.
+3) User clicks the "Get photos" button, and the photos from the corresponding album are displayed.
    - URL for the request: `https://jsonplaceholder.typicode.com/photos?albumId=[album_id]`, where [album_id] is the number taken from the input.
    - When loading other albums, the photo list is overwritten.
    - After the page reloads, the photo list is empty.
