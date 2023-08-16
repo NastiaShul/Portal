@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.header{
+   display: flex;
+   @media (min-width: 769px) {
+    justify-content: space-between;
+ }
+   @media (max-width: 768px) {
+    flex-direction: column;
+ }
+
+ &__title{
+   font-weight: bold;
+   font-size: 28px;
+   line-height: 133%;
+   &:hover {
+      color: $additional;
+  }
+   @media (max-width: 768px) {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+ }
+ }
+ &__menu{
+   ul {
+      display: flex;
+      font-weight: bold;
+      line-height: 133%;
+      @media (min-width: 769px) {
+         justify-content: space-between;
+         font-size: 24px;
+      }
+      li {
+          margin: 0 8px 0 0;
+          a:hover {
+              color: $additional;
+          }
+      }
+  }
+ }
+}

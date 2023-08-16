@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+
+input{
+   font-family: 'Ubuntu', sans-serif;
+   width: 80%;
+   padding: 0 0 0 12px;
+   font-size: 16px;
+   font-weight: 400;
+   color:  $text-color;
+   background: transparent;
+   outline: none;
+   border: none;
+   &::placeholder {
+      font-size: 12px;
+      font-weight: 400;
+   }
+   &:focus::-webkit-input-placeholder{
+      color:transparent;
+   }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+   -moz-appearance: textfield;
+ }

@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+
+
+.task-item{
+   padding: 5px;
+   height: 60px;
+   display: flex;
+   align-items: center;
+   background: $main-color;
+   box-shadow:  -1px -1px 2px rgba(165, 187, 224, 0.2), inset -5px 5px 10px rgba(165, 187, 224, 0.9), inset 5px -5px 10px rgba(165, 187, 224, 0.9), inset -5px -5px 10px rgba(165, 187, 224, 0.3), inset 5px 5px 13px rgba(165, 187, 224, 0.5);
+   border-radius: 16px;
+   justify-content: space-between;
+   &:not(:last-child){
+      margin: 0 0 10px 0;
+   }
+
+   &__content{
+      display: flex;
+      text-align: left;
+      @media (min-width: 578px) {
+         width: 78%;
+      }
+      &>p{
+         word-break: break-all;
+      }
+   }
+
+   &__btns{
+      display: flex;
+      text-align: right;
+   }
+}
+.checkbox{
+   display: flex;
+	align-items: center;
+
+   &__input{
+      display: none;
+   }
+   &__checked{
+      display: inline-block;
+      width: 14px;
+      height: 14px;   
+      margin: 0 10px 0 0;
+      border-radius: 50%;
+      background-color: $text-color;
+   }
+   &__check{
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 3px solid $text-color;
+      border-radius: 50%;
+      position: relative;
+      margin: 0 10px 0 0;
+      cursor: pointer;
+   }
+}

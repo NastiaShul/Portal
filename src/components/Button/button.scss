@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.primary {
+   color: $text-color;
+   border-left: 3px solid $additional;
+}
+
+.active{
+   text-decoration: underline;
+}
+
+.additional{
+   &>svg{
+      outline: 1px solid $additional;
+      padding: 3px;
+      border-radius: 5px;
+   }
+}
+
+button {
+   min-width: 60px;
+   background-color: transparent;
+   color: $text-color;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.3s transform;
+   border: none;
+   &:not(:last-child){
+      margin: 0 10px 0 0;
+   }
+   &>svg{
+      width:25px;
+      height: 20px;
+   }
+   cursor: pointer;
+   &:hover {
+      transform: translateY(-5px);
+      color: $additional;
+   }
+   &:disabled{
+      color: $neutral-color;
+      border-left: 3px solid $neutral-color;
+    }
+
+}

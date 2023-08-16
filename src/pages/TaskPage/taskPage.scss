@@ -1,0 +1,10 @@
+@import "../../styles//variables.scss";
+
+.task-page{
+   &__text{
+      color: $warning;
+   }
+   &__text-done{
+      color: $additional;
+   }
+}

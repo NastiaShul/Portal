@@ -1,0 +1,25 @@
+.list{
+   &__container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		margin: 50px 0 0 0;
+   }
+   &__body{
+      width: 650px;
+      padding: 15px;
+      @media (max-width: 768px) {
+         width: 100%;
+      }
+      @media (max-width: 768px) {
+         padding: 0px;
+      }
+   }
+   &__title{
+		font-size: 30px;
+		font-weight: 700;
+		margin: 0 0 15px 0;
+   }
+}
